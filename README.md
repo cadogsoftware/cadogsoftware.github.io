@@ -6,3 +6,5 @@ We have a wealth of experience designing and delivering Java and Scala projects 
 ### Enquiries
 You can contact us by emailing [richard@cadogsoftware.co.uk](mailto:richard@cadogsoftware.co.uk)
 
+### Things in progress....
+Link to my evaluations page is [here](evaluations.md)
