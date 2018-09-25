@@ -7,18 +7,12 @@ Note : this page is in progress. I'll update it as more frameworks are evaluated
 
 ## Frameworks to evaluate
 
-### DropWizard
-
-### JHipster
-
-### SpringBoot
-
-### RestEasy
-
-### Spark
-
-### Vertex
-
+* DropWizard
+* JHipster
+* SpringBoot
+* RestEasy
+* Spark
+* Vertex
 
 ## Let's get going...
 
