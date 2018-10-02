@@ -157,7 +157,7 @@ been good to talk a bit about unit testing in the 'getting started' guide.
 #### Overall Verdict
 As expected, this is a really easy way to get up and running. You hardly need to write any code to create REST services. 
 This is one of my favourite frameworks in this evaluation. If you are already using Spring for other things then this is the framework 
-for you. Even if you are not using Spring, then you really need to consider Spring Boot as its really good.
+for you. Even if you are not using Spring, then you really need to consider Spring Boot as it's really good.
 
 
 
