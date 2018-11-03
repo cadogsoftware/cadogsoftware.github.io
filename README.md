@@ -9,4 +9,4 @@ You can contact us by emailing [richard@cadogsoftware.co.uk](mailto:richard@cado
 ### Tech Evaluations
 
 #### Java based REST frameworks
-A comparison of some of the Java based REST frameworks [here](docs/java-rest-frameworks/evaluation.md)
+A comparison of some of the Java based REST frameworks is [here](docs/java-rest-frameworks/evaluation.md)
