@@ -17,7 +17,7 @@ frameworks. Using this I can get a feel for which of the frameworks I like the m
 * SpringBoot
 * Vert.x
 
-[Conclusion](docs/java-rest-frameworks-conclusion.md)
+[Conclusion](java-rest-frameworks-conclusion.md)
 
 
 ## Let's get going...
