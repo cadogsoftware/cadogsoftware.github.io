@@ -1,20 +1,71 @@
 # Java Based REST framework evaluation
 
-Note : this page is in progress. I'll update it as more frameworks are evaluated.
-
 ## Introduction
 
-
-## Frameworks to evaluate
+## Frameworks to evaluate (in alphabetical order)
 
 * DropWizard
 * JHipster
-* SpringBoot
 * RestEasy
 * Spark
-* Vertex
+* SpringBoot
+* Vert.x
+
+My aim is to get a simple REST service up and running as quickly as possible in each of the above 
+frameworks.
 
 ## Let's get going...
+
+
+### Dropwizard
+
+Having used Dprozizard for many years, I know how straightforward it is to get a REST service up and running with this. All the same I wanted to go right 
+back to the start and try creating an app from scratch.
+The Dropwizard website states that you get "Production-ready, out of the box", which sounds pretty impressive.
+I followed the "Getting Started" (https://www.dropwizard.io/1.2.0/docs/getting-started.html) section and this is how I got on.
+
+#### Installation and setup
+
+There was no installation of any software as such. I generated a maven project using the archetype command given on the website
+
+```bash
+mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=1.2.0
+```
+
+As expected, this created a bare bones maven project, but it did save me a fair bit of time as a lot of the code and config was generated for me.
+
+Next, I added a Configuration, an Application and a Representation class as described on the website.
+After that it was time to add a Resource class to return a simple String in the event of a GET request to (yes, you guessed it) /hello-world.
+
+I added a simple Healthcheck and I was good to go! 
+
+The application started up using the command taken from the website:
+
+```bash
+java -jar target/hello-world-0.0.1-SNAPSHOT.jar server config.yml
+```
+
+The server stared up in no time and I was able to hit the simple endpoint at http://localhost:8080/hello-world. Even the option to add the version 
+of your app into the Manifest file within the generated jar worked witout problem.
+
+All of the resources served from the admin port (go to http://localhost:8081) also worked out of the box, which was great.
+
+#### A simple deployment
+I didn't try a simple deployment but is should be straightforward using the Heroku maven plugin:
+https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin
+
+#### Good things
+You don't need any additional software installed in order to get going, assuming you have Java and Maven pre-installed.
+It's really quick to generate a project, (especially if you use the maven archetype) and configure it in order to get something running easily.
+
+#### And the not so good
+Having to remember to add your new Resource classes to the Application run method was a bit of a pain. It would be nice if there was a 
+way to do this automatically.
+
+#### Overall Verdict
+Dropwizard is a great framework to use to write REST services. All you have to do is go through the getting started page (link as above) 
+in order to get going with this. I've used this framework for a number of years. It's lightweight, required little in the way of configuration 
+and is easy to understand. This is a great framework.
 
 ### JHipster
 
@@ -69,98 +120,6 @@ The only criticism I can come up with, as with any generation framework, is that
 I was really impressed by JHipster and what is has to offer. It’s simple to generate high grade complete applications in a very short space of time. I definitely recommend taking a look at this framework.
 
 
-### Dropwizard
-
-Having used Dprozizard for many years, I know how straightforward it is to get a REST service up and running with this. All the same I wanted to go right 
-back to the start and try creating an app from scratch.
-The Dropwizard website states that you get "Production-ready, out of the box", which sounds pretty impressive.
-I followed the "Getting Started" (https://www.dropwizard.io/1.2.0/docs/getting-started.html) section and this is how I got on.
-
-#### Installation and setup
-
-There was no installation of any software as such. I generated a maven project using the archetype command given on the website
-
-```bash
-mvn archetype:generate -DarchetypeGroupId=io.dropwizard.archetypes -DarchetypeArtifactId=java-simple -DarchetypeVersion=1.2.0
-```
-
-As expected, this created a bare bones maven project, but it did save me a fair bit of time as a lot of the code and config was generated for me.
-
-Next, I added a Configuration, an Application and a Representation class as described on the website.
-After that it was time to add a Resource class to return a simple String in the event of a GET request to (yes, you guessed it) /hello-world.
-
-I added a simple Healthcheck and I was good to go! 
-
-The application started up using the command taken from the website:
-
-```bash
-java -jar target/hello-world-0.0.1-SNAPSHOT.jar server config.yml
-```
-
-The server stared up in no time and I was able to hit the simple endpoint at http://localhost:8080/hello-world. Even the option to add the version 
-of your app into the Manifest file within the generated jar worked witout problem.
-
-All of the resources served from the admin port (go to http://localhost:8081) also worked out of the box, which was great.
-
-#### A simple deployment
-I didn't try a simple deployment but is should be straightforward using the Heroku maven plugin:
-https://devcenter.heroku.com/articles/deploying-java-applications-with-the-heroku-maven-plugin
-
-#### Good things
-You don't need any additional software installed in order to get going, assuming you have Java and Maven pre-installed.
-It's really quick to generate a project, (especially if you use the maven archetype) and configure it in order to get something running easily.
-
-#### And the not so good
-Having to remember to add your new Resource classes to the Application run method was a bit of a pain. It would be nice if there was a 
-way to do this automatically.
-
-#### Overall Verdict
-Dropwizard is a great framework to use to write REST services. All you have to do is go through the getting started page (link as above) 
-in order to get going with this. I've used this framework for a number of years. It's lightweight, required little in the way of configuration 
-and is easy to understand. This is a great framework.
-
-
-### Spring Boot
-
-#### Installation and setup
-Creation of a new Spring Boot project was remarkably easy. All you need is a recent version of java (1.8+) and Maven installed locally.
-I followed the 'Getting Started' guide supplied by Pivotal at https://spring.io/guides/gs/rest-service/
-
-When going through the guide I cloned the project which contains two folders - one called 'initial' for you to use as a starting point and 
-another called 'complete', which, as the name suggests contains the complete code.
-After that I added the resource representation class, the resource controller and the application class.
-IntelliJ provided a way to view and edit my code easily and I used Maven as my build system to generate the jar file and was able to start 
-up my application using this command:
-
-```bash
-java -jar target/gs-rest-service-0.1.0.jar
-```
-
-All of this took 10-15 mins, and I was impressed by how easy this was. 
-
-One thing I did notice from the getting started guide is that there was no mention of unit tests, but inspection of the 'complete' folder 
-soon showed me how easy it was to write unit tests for my new Controller, so I copied some of these into my app.
-
-#### A simple deployment
-TODO
-
-#### Good things
-I liked the way Pivotal have provided a git repo that you can clone, with two folders in it - one is an 'initial' project structure for 
-you to start working on and another called 'complete' that contains the finished project.
-Instructions on the website were clear and concise and I loved that it took a very small amount of time to get a basic REST service up and running.
-Personally, I love the Spring annotations and how concise they enable the code base to be.
-
-#### And the not so good
-A bit more information on the unit testing side of things would have been good. I'm sure this is somewhere in the Spring documentation but it would have 
-been good to talk a bit about unit testing in the 'getting started' guide.
-
-#### Overall Verdict
-As expected, this is a really easy way to get up and running. You hardly need to write any code to create REST services. 
-This is one of my favourite frameworks in this evaluation. If you are already using Spring for other things then this is the framework 
-for you. Even if you are not using Spring, then you really need to consider Spring Boot as it's really good.
-
-
-
 ### Resteasy
 
 #### Installation and setup
@@ -204,6 +163,7 @@ From what I have seen in my quick trial Resteasy does not live up to it's name! 
 I really wouldn't bother with this framework. I spent over 2 hours trying to get this to work and then stopped trying.
 It may be pretty good if you know how to get going, but compared to Spring or Dropwizard it's not in the same league.
 Only use this if you really have to!
+
 
 ### Spark
 
@@ -332,14 +292,122 @@ I don't think Spark is the worst framework I have looked at, but it's not the be
 Although the website looks clear, some of the instructions are not complete in my opinion. 
 If you are already tied into using Spark then it's probably worth continuing with it, if not then go for one of the other frameworks.
 
+### Spring Boot
+
+#### Installation and setup
+Creation of a new Spring Boot project was remarkably easy. All you need is a recent version of java (1.8+) and Maven installed locally.
+I followed the 'Getting Started' guide supplied by Pivotal at https://spring.io/guides/gs/rest-service/
+
+When going through the guide I cloned the project which contains two folders - one called 'initial' for you to use as a starting point and 
+another called 'complete', which, as the name suggests contains the complete code.
+After that I added the resource representation class, the resource controller and the application class.
+IntelliJ provided a way to view and edit my code easily and I used Maven as my build system to generate the jar file and was able to start 
+up my application using this command:
+
+```bash
+java -jar target/gs-rest-service-0.1.0.jar
+```
+
+All of this took 10-15 mins, and I was impressed by how easy this was. 
+
+One thing I did notice from the getting started guide is that there was no mention of unit tests, but inspection of the 'complete' folder 
+soon showed me how easy it was to write unit tests for my new Controller, so I copied some of these into my app.
 
 
-### Vertex
+#### Good things
+I liked the way Pivotal have provided a git repo that you can clone, with two folders in it - one is an 'initial' project structure for 
+you to start working on and another called 'complete' that contains the finished project.
+Instructions on the website were clear and concise and I loved that it took a very small amount of time to get a basic REST service up and running.
+Personally, I love the Spring annotations and how concise they enable the code base to be.
 
-TODO
+#### And the not so good
+A bit more information on the unit testing side of things would have been good. I'm sure this is somewhere in the Spring documentation but it would have 
+been good to talk a bit about unit testing in the 'getting started' guide.
+
+#### Overall Verdict
+As expected, this is a really easy way to get up and running. You hardly need to write any code to create REST services. 
+This is one of my favourite frameworks in this evaluation. If you are already using Spring for other things then this is the framework 
+for you. Even if you are not using Spring, then you really need to consider Spring Boot as it's really good.
+
+
+### Vert.x
+
+#### Installation and setup
+From reading the introduction at https://vertx.io/ it was clear that this framework offers much more than
+just a REST framework, but for the purposes of this evaluation I wanted to stick to trying to create a basic service.
+I wasn't 100% sure where to start if I'm honest, so I went for the 'Starter' link at the top of the main
+page (http://start.vertx.io/), filled in the details and downloaded my first project.
+
+I then imported this into my IDE to take a look at what had been generated.
+
+As it turns out this generated just what I wanted - a simple service that I could spin up and hit right away.
+
+One of the concepts Vert.x uses is called 'Verticles'. This is what was generated for me.
+Although I didn't find the code as intuitive to follow as some of the other frameworks it was 
+obvious what the 'Verticle' was doing.
+
+Following the 'README' in the generated project enabled me to package my project using the usual command:
+
+(NOTE: this link also looks like a good place to start https://github.com/vert-x3/vertx-examples/tree/master/maven-simplest)
+
+```bash
+./mvnw clean package
+```
+
+Unfortunately, the instructions to run the project were wrong. This command was given:
+
+```bash
+./mvnw clean exec:java
+```
+
+but if I followed this I got an error:
+
+```bash
+java.lang.ClassNotFoundException: io.vertx.starter.MainVerticle
+```
+which was sort of expected as the 'clean' phase gets rid of the generated jar. Using this command fixed the issue:
+
+```bash
+./mvnw clean package exec:java
+```
+
+Now I had a simple server running and going to http://localhost:8080 gave me the good old Hello World text in return
+
+![Vert.x hello world]({{ site.url }}/images/Vertx_hello_world.png)
+
+
+#### Good things
+You can use Vert.x with multiple languages including Java, JavaScript, Groovy, Ruby, Ceylon, Scala and Kotlin
+Eclipse Vert.x is event driven and non blocking
+
+#### And the not so good
+Lots of features (which is good!) means it may be hard to find what you are looking for in the documentation.
+
+#### Overall Verdict
+Although I did find creating a REST endpoint easy, I didn't find it as 
+intuitive as some of the other frameworks. 
+The documentation was pretty clear but as Vert.x is clearly much more than a REST it was harder to find the information 
+I needed really quickly. 
+I certainly think more time is required to evaluate the other areas of the framework.
+If you are looking for a framework that does a whole lot more than just REST endpoints then
+Vert.x is worth looking at in more detail than I have here.
+
 
 ### Conclusion
-TOTO
+
+I have quickly investigated several java REST frameworks. My aim was to get something running quickly in each of these 
+so I limited myself to a small amount of time on each.
+Here is how I rank the frameworks in order of best to worst:
+
+1. SpringBoot
+2. Dropwizard
+3. JHipster
+4. Vert.x
+5. Spark
+6. RestEasy
+
+
+
 
 
 
