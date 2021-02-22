@@ -11,7 +11,7 @@ You can contact us by emailing [richard@cadogsoftware.co.uk](mailto:richard@cado
 Here are some links to some technical areas that we have worked on recently:
 
 #### The Event Sourcing and CQRS Patterns
-[What is Event Sourcing and CQRS and when should you use them](docs/event-sourcing-and-cqrs/EventSourcingAndCQRS.md)
+[What are the Event Sourcing and CQRS Patterns and when should you use them](docs/event-sourcing-and-cqrs/EventSourcingAndCQRS.md)
 
 #### Java based REST frameworks
 [A comparison of some of the Java based REST frameworks](docs/java-rest-frameworks/evaluation.md)
