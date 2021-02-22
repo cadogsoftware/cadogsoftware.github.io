@@ -51,5 +51,7 @@ Event Souring and CQRS is a good way of separating your reads and writes for per
 
 ## Useful information
 Martin Fowler's explanation of CQRS: https://martinfowler.com/bliki/CQRS.html
+
 Martin Fowler's explanation of Event Sourcing: https://martinfowler.com/eaaDev/EventSourcing.html
+
 Greg Young's summary: http://codebetter.com/gregyoung/2010/02/16/cqrs-task-based-uis-event-sourcing-agh/
