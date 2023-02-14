@@ -13,4 +13,35 @@ This guide is rightly based on Spring's recommendations, with our own comments a
 
 This is in progress! More to come soon!
 
+A simple Controller
+
+```java
+package uk.co.cadogsoftware.api.controllers;
+
+import java.util.List;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+import uk.co.cadogsoftware.api.dtos.BookDTO;
+
+@RestController
+public class BookController {
+
+  @GetMapping("/books")
+  public List<BookDTO> getBooks() {
+    // TODO: look up the books here!
+    return List.of(new BookDTO(1, "Animal Farm", "George Orwell"),
+        new BookDTO(2, "1984", "George Orwell"));
+  }
+
+  @GetMapping("/books/{id}")
+  public BookDTO getBookById(@RequestParam(value = "id", defaultValue = "1") int id) {
+    // TODO: look up the book here!
+    return new BookDTO(1, "Animal Farm", "George Orwell");
+  }
+
+}
+
+```
+
 ### A simple REST controller
