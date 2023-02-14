@@ -13,7 +13,7 @@ This guide is rightly based on Spring's recommendations, with our own comments a
 
 This is in progress! More to come soon!
 
-A simple Controller
+### A simple controller to get us going
 
 ```java
 package uk.co.cadogsoftware.api.controllers;
@@ -43,5 +43,3 @@ public class BookController {
 }
 
 ```
-
-### A simple REST controller
