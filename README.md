@@ -15,3 +15,6 @@ Here are some links to some technical areas that we have worked on recently:
 
 #### Java based REST frameworks
 [A comparison of some of the Java based REST frameworks](docs/java-rest-frameworks/evaluation.md)
+
+#### Spring REST done properly
+[A best practice guide describing how to write Spring REST services](docs/spring-rest/SpringRESTBestPractices.md)
