@@ -13,7 +13,7 @@ This guide is rightly based on Spring's recommendations, with our own comments a
 
 This is in progress! More to come soon!
 
-### A simple controller to get us going
+### A simple controller and DTO to get us going
 
 ```java
 package uk.co.cadogsoftware.api.controllers;
@@ -42,4 +42,12 @@ public class BookController {
 
 }
 
+```
+
+```java
+package uk.co.cadogsoftware.api.dtos;
+
+public record BookDTO(int id, String title, String author) {
+
+}
 ```
