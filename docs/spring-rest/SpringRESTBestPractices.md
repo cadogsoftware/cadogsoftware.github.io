@@ -365,4 +365,10 @@ curl -X POST localhost:8080/books -H 'Content-type:application/json' -d '{"isbn"
 
 ### Where are we so far?
 
-No HATEOS so not really REST - TODO: expand on this and implement HATEOS
+So far, we have created a CRUD application. Whilst this is all very good and follows a lot of best practices, it is not really RESTful. This is because the end user of our service(s) does not know how to interact with it. We would have to provide documentation that describes how the services should be used.
+
+So, as in the Spring guide https://spring.io/guides/tutorials/rest/, the next step is to make this application RESTful.
+
+Roy Fielding describes what makes something RESTful far better than we can, in his guide from 2008 https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+
+Follow the link here to see these next steps: [Making it RESTful](./MakingItRestful.md)
