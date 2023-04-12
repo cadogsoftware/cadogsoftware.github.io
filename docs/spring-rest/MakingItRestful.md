@@ -15,4 +15,6 @@ Essentially, the responses we return from our services need to contain informati
 
 This principle is called HATEOAS (Hypermedia as the Engine of Application State) and is what we will be implementing in the following sections.
 
-## Adding in HATEOAS
+The example given on the [HATEOAS Wikipedia page](https://en.wikipedia.org/wiki/HATEOAS) gives a nice example of this principle in action.
+
+## Adding in HATEOAS to our application
