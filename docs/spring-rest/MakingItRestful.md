@@ -207,3 +207,7 @@ Response:
 ```
 
 Notice how the responses now contain a "_links" section containing the HATEOAS links. Using these, any client can determine what to do next.
+
+### Next steps
+
+Now we have HATEOAS in place, the next principle we will address is making a change to the API. Wherever possible this should be a non breaking change, so that existing clients can continue to work. To do this follow this link: [Making Non Breaking Changes](./MakingNonBreakingChanges.md)
