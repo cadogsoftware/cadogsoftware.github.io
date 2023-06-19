@@ -150,7 +150,7 @@ Both @PathVariable and @RequestParam are required by default but can be made opt
 
 ### Data objects used
 
-The clinet view of the Book is the BookDTO, but the database stores a slightly differnt object, in our case a Book. We have decoupled the client's view of the Book from the Book stored in the database so that we can expose only the fileds we want to to the clinet. In this case our Book contains a generated id that the client does not need to know about.
+The client view of the Book is the BookDTO, but the database stores a slightly different object, in our case a Book. We have decoupled the client's view of the Book from the Book stored in the database so that we can expose only the fields we want to to the client. In this case our Book contains a generated id that the client does not need to know about.
 
 *** BEST PRACTICE : Separate the client's view of the data from that stored in the database ***
 
