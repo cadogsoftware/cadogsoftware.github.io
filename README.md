@@ -10,7 +10,7 @@ You can contact us by emailing [richard@cadogsoftware.co.uk](mailto:richard@cado
 Here are some links to some technical areas that we have worked on recently:
 
 #### Java REST API Sample Application and Best Practices
-[A sample Spring based Java app exposing REST APIs](docs/spring-rest/SpringRESTBestPractices.md)
+[A sample Spring based Java app exposing REST APIs](docs/spring-rest/SpringRESTBestPractices.md), complete with a link to the source code.
 
 #### The Event Sourcing and CQRS Patterns
 [What are the Event Sourcing and CQRS Patterns and when should you use them](docs/event-sourcing-and-cqrs/EventSourcingAndCQRS.md)
