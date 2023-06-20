@@ -206,7 +206,7 @@ Response:
 }
 ```
 
-Notice how the responses now contain a "_links" section containing the HATEOAS links. Using these, any client can determine what to do next.
+Notice how the responses now contain a "_links" section containing the HATEOAS links. Using these, any client can determine what to do next. For example some books may be allowed to be deleted and others not. Or a better example would be for an 'Order': An in progress order can be cancelled so we would send a link to be able to do that wheras a completed order cannot be cancelled, so in that case no link to cancel the order would be sent in the response.
 
 ### Next steps
 

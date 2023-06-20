@@ -462,7 +462,13 @@ And then start the application:
 
 ### Testing
 
-There are unit tests within the code base, but to perform integration tests (i.e. end to end tests) you can import the Postman file from the project into your Postman app and run the requests in that. The Postman file is here https://github.com/cadogsoftware/APIBestPractices/blob/main/integration-tests/API_Best_Practices.postman_collection.json
+There are unit tests within the code base. To run these enter this command:
+
+```
+./mvnw clean test
+```
+
+To execute the integration tests (i.e. end to end tests) you can import the Postman file from the project into your Postman app and run the requests in that. The Postman file is here https://github.com/cadogsoftware/APIBestPractices/blob/main/integration-tests/API_Best_Practices.postman_collection.json
 
 Alternatively you can run some curl commands like this:
 
