@@ -19,7 +19,7 @@ The example given on the [HATEOAS Wikipedia page](https://en.wikipedia.org/wiki/
 
 ## Adding in HATEOAS to our application
 
-Here is our modified code with HATEOAS added in:
+Here is our controller code again:
 
 The Controller:
 
@@ -210,4 +210,4 @@ Notice how the responses now contain a "_links" section containing the HATEOAS l
 
 ### Next steps
 
-Now we have HATEOAS in place, the next principle we will address is making a change to the API. Wherever possible this should be a non breaking change, so that existing clients can continue to work. To do this follow this link: [Making Non Breaking Changes](./MakingNonBreakingChanges.md)
+We have HATEOAS in place, the next principle we will address is making a change to the API. Wherever possible this should be a non breaking change, so that existing clients can continue to work. To do this follow this link: [Making Non Breaking Changes](./MakingNonBreakingChanges.md)
