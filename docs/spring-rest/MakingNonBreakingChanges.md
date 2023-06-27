@@ -153,4 +153,6 @@ As mentioned at the start of this article, the basis for what has been written h
 
 Full source code of this service can be found here: [API Best Practices](https://github.com/cadogsoftware/APIBestPractices)
 
+For a guide on deploying a Spring Boot app to AWS see here: [Deploying a Spring Boot app to AWS](../DeployASpringBootAppToAWS.md)
+
 We hoped you enjoyed reading this and found it beneficial!

@@ -1,6 +1,6 @@
 # Microservices - the good and the bad
 
-## What is a Microservices
+## What is a Microservice
 It's difficult to find a consistent definition of what a microservice is but one of our favourites is from https://microservices.io/
 
 "Microservices - also known as the microservice architecture - is an architectural style that structures an application as a collection of services that are
