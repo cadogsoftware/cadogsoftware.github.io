@@ -15,8 +15,8 @@ Here are some links to some technical areas that we have worked on recently:
 #### Deploying a Spring Boot app to AWS
 [Deploying our Spring Boot sample app to AWS](docs/DeployASpringBootAppToAWS.md)
 
-#### The Event Sourcing and CQRS Patterns
-[What are the Event Sourcing and CQRS Patterns and when should you use them](docs/event-sourcing-and-cqrs/EventSourcingAndCQRS.md)
-
 #### Java Based REST Frameworks
 [A comparison of some of the Java based REST frameworks](docs/java-rest-frameworks/evaluation.md)
+
+#### The Event Sourcing and CQRS Patterns
+[What are the Event Sourcing and CQRS Patterns and when should you use them](docs/event-sourcing-and-cqrs/EventSourcingAndCQRS.md)
