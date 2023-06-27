@@ -164,5 +164,6 @@ It is good to change the version in the pom.xml file each time you deploy, so th
 
 ### Useful resources
 
-[Spring guide for deploying to AWS] (https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment.cloud.aws)
+[Spring guide for deploying to AWS](https://docs.spring.io/spring-boot/docs/current/reference/html/deployment.html#deployment.cloud.aws)
+
 [AWS Guide to Creating and deploying Java applications on Elastic Beanstalk](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_Java.html)
